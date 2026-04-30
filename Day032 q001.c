@@ -24,10 +24,9 @@ int main() {
 
     if (scanf("%d", &n) != 1) return 0;
 
-    int stack[1000];  // fixed-size array (adjust size if needed)
+    int stack[1000];  
     int top = -1;
 
-    // Push elements into stack
     for (int i = 0; i < n; i++) {
         int val;
         scanf("%d", &val);
@@ -36,14 +35,12 @@ int main() {
 
     scanf("%d", &m);
 
-    // Pop m elements
     for (int i = 0; i < m; i++) {
         if (top >= 0) {
             top--;
         }
     }
 
-    // Print remaining stack
     for (int i = top; i >= 0; i--) {
         printf("%d", stack[i]);
         if (i > 0) {
